@@ -1,0 +1,69 @@
+\documentclass{article}
+\author{Alex Hiller}
+\title{}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.125cm}
+\pagenumbering{gobble}
+\usepackage[margin=2.5cm]{geometry} % Formatting
+\usepackage{amsmath}                % Mathematics
+\usepackage{amssymb}                % Mathematics
+\usepackage{esint}                  % Mathematics
+\usepackage{listings}               % Listings
+\usepackage{color}                  % Listings
+\usepackage{courier}                % Listings
+\usepackage{circuitikz}             % Circuits
+\usepackage{titlesec}               % Section Formatting
+\usepackage{graphicx}               % Graphics
+\input{/home/polluticorn/GitHub/texTemplates/texMacros}
+% Section formatting
+\titleformat{\section}{\huge \bfseries}{}{0em}{}[]
+\titleformat{\subsection}{\Large \bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\bfseries}{}{0em}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\subsection{Electrostatics}
+
+
+\subsection{Magnetostatics}
+
+
+\subsection{Vector Calculus}
+
+\subsubsection{Divergence Theorem}
+\begin{equation}
+  \int \left( \nabla \cdot \mathbf{A} \right) \ d \tau = \oint \mathbf{A} \cdot  d \mathbf{a}
+\end{equation}
+
+\subsubsection{Gradient Theorem}
+\begin{equation}
+  \int^b_a \left( \nabla \cdot f \right) \cdot d \mathbf{l} = f(\mathbf{b}) - f(\mathbf{a})
+\end{equation}
+
+\subsubsection{Curl Theorem}
+\begin{equation}
+  \int \left( \nabla \times \mathbf{A} \right) d \mathbf{a} = \oint \mathbf{A} \cdot d \mathbf{l}
+\end{equation}
+
+
+\subsubsection{Identities}
+\begin{equation}    
+  <++>
+\end{equation}
+
+
+
+
+\subsection{Electric Fields in Matter}
+
+\subsection{Magnetic Fields in Matter}
+
+\subsection{Potentials}
+
+\subsection{Complex Variables}
+
+\subsection{Schwarz-Christoffel Transformation}
+
+
+\end{document}

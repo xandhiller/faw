@@ -1,0 +1,66 @@
+\documentclass{article}
+\author{Alex Hiller}
+\title{Meeting, 15th February 2019}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.125cm}
+\pagenumbering{gobble}
+\usepackage[margin=2.5cm]{geometry} % Formatting
+\usepackage{amsmath}                % Mathematics
+\usepackage{amssymb}                % Mathematics
+\usepackage{esint}                  % Mathematics
+\usepackage{listings}               % Listings
+\usepackage{color}                  % Listings
+\usepackage{courier}                % Listings
+\usepackage{circuitikz}             % Circuits
+\usepackage{titlesec}               % Section Formatting
+\usepackage{graphicx}               % Graphics
+\input{/home/polluticorn/GitHub/texTemplates/texMacros}
+% Section formatting
+\titleformat{\section}{\huge \bfseries}{}{0em}{}[]
+\titleformat{\subsection}{\Large \bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\bfseries}{}{0em}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+
+\section{Recap/Thoughts}
+I roughly covered magnetostatics. Hoping to get tutelage through the remainder of the questions in the assigned problems. I've been doing problems out of Griffiths, and trying hard not to get caught up in being super robust, mathematically speaking.  
+
+\section{Action Items:}
+\begin{itemize}
+  \item Go through assigned problems Q3 (all) using intuition.
+  \item Complete problems together
+  \item Go through questions at the end of this document.
+\end{itemize}
+
+\section{Issues}
+\begin{itemize}
+  \item Parameterising things. I kept finding the force as if it was only happening on one axis, instead of finding the whole force and then taking the cosine or sine of the angle. 
+  \item Electrostatics problems are so boring. I find the mathematics so boring.  I was trying to formally prove algebraically that the electric field would sum on one axis in a problem and I spent some time making errors before I just simplified that part of the working to say that it would go in the same direction intuitively.  
+\end{itemize} 
+  
+\qanda
+{Example 6 - Surface Charge on a Conductor wasn't making sense}
+{<++>} 
+\qanda
+{What really is the electric field? Who came up with it?}
+{<++>}
+\qanda
+{Pseudovectors, came across them. Formal meaning?}
+{<++>} 
+\qanda
+{Differential operator working, is it correct? Was to prove that dl $\times$ r =dB}
+{<++>} 
+\qanda
+{What's an application of Ampere's law or Biot-Savart?}
+{<++>} 
+\qanda
+{Discontinuities at a surface for electric charge? Related to an example.}
+{<++>} 
+\qanda
+{Are you aware that the circuit parameters are not talked about or mapped into physics until other chapters? Specifically, capacitance is only mentioned in the 'Electric Fields in Matter' chapter and inductance is seemingly only mentioned from the 'Magnetic Fields in Matter' chapter.}
+{<++>} 
+
+\end{document}
