@@ -1,0 +1,106 @@
+\documentclass{article}
+\author{Alex Hiller}
+\title{}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.125cm}
+\pagenumbering{gobble}
+\usepackage[margin=2.5cm]{geometry} % Formatting
+\usepackage{amsmath}                % Mathematics
+\usepackage{amssymb}                % Mathematics
+\usepackage{esint}                  % Mathematics
+\usepackage{listings}               % Listings
+\usepackage{color}                  % Listings
+\usepackage{courier}                % Listings
+\usepackage{circuitikz}             % Circuits
+\usepackage{titlesec}               % Section Formatting
+\usepackage{graphicx}               % Graphics
+\usepackage{stmaryrd}               % \mapsfrom arrow. ↤
+\input{/home/polluticorn/GitHub/texTemplates/texMacros}
+% Section formatting
+\titleformat{\section}{\huge \bfseries}{}{0em}{}[]
+\titleformat{\subsection}{\Large \bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\bfseries}{}{0em}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\subsection{Read and Understand}
+
+\textit{Griffiths: Example 2, pg. 174.}  -- done, with questions.
+
+\textit{Griffiths: Section 2.3} -- 
+
+
+
+
+
+\subsection{Question 1}
+\textit{Griffiths: Chapter 3 Problem 54} 
+
+For the infinite rectangular pipe in Ex. 4, suppose the potential on the bottom 
+($y=0$) and the two sides ($x = \pm b$) is zero, but the potential on the top 
+($y=a$) is a non-zero constant $V_0$. 
+
+Find the potential inside the pipe.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.3\textwidth]{infinite_pipe.png}
+	\caption{Long, infinite and straight pipe.}
+\end{figure}
+
+
+
+
+\subsection{Question 2}
+
+\textit{Griffiths: Chapter 3, Problem 40}
+
+Two long straight wires, carrying opposite uniform line charges $\pm \lambda$, 
+are situated on either side of a long conducting cylinder. The cylinder (which 
+carries no net charge) has radius $R$, and the wires are a distance $a$ from 
+the axis. 
+
+Find the potential.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.4\textwidth]{long_straight_wires.png}
+\end{figure}
+
+
+
+
+\clearpage
+\subsection{Question 3}
+
+\textit{FCA: Chapter 3.4, Problem 1}
+
+Find the solution to the boundary valued problem depicted in Fig. 3.11 and 
+evaluate it at (0,0).
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{problem_3.png}
+\end{figure}
+
+
+
+
+
+\subsection{Question 4}
+
+\textit{FCA: Chapter 4.7, Problem 11}
+
+The temperature of the rim of the unit disk is maintained at the levels 
+indicated in fig 4.61. What is the temperature at the centre?
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.4\textwidth]{problem_4.png}
+\end{figure}
+
+
+
+
+\end{document}
