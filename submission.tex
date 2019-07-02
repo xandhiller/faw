@@ -21,7 +21,7 @@
 \columnsep=75pt
 \usepackage{blindtext}
 \setsvg{inkscape=inkscape -z -D}
-\input{/home/polluticorn/GitHub/texTemplates/texMacros}
+% \input{/home/polluticorn/GitHub/texTemplates/texMacros}
 % Section formatting
 \titleformat{\section}{\huge \bfseries}{}{0em}{}[]
 \titleformat{\subsection}{\Large \bfseries}{}{0em}{}
@@ -34,16 +34,245 @@
 \clearpage
 
 %%%%%%%%%%%%%%%%%%%%
+\section{Problem Sheet 1} 
+
+\subsection{Griffiths, Chapter 3, Problem 54}
+
+\subsubsection{Note} 
+Positioning used is that present in the original question, \textbf{not} placement
+of the pipe's corner on $z=0$.
+
+\subsubsection{Working} 
+Using separation of variables and the fact that the voltage function obeys Laplace's Equation, we get:
+
+\[%
+    V(x,y) 
+    =
+    (A e^{ky}+ B e^{-ky})
+    \left(C \sin\left(kx\right) 
+    +
+    D \cos\left(kx\right) \right)
+\]%
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{|c|c|} \hline
+        & Boundary Values  \\ \hline
+        (i) & $ V(x,0) $ = 0      \\ \hline
+        (ii) & $ V(x,a) $ = $V_0$  \\ \hline
+        (iii) & $ V(b,y) $ = 0 \\ \hline
+        (iv) & $ V(-b,y)$ = 0 \\ \hline
+    \end{tabular}
+\end{table}
+
+First thing is that there's a common approach of "it's symmetric across the
+x-axis" and so the coefficient $C$ for $C \cdot \sin\left(kx\right) $
+
+We'll abuse that convention to simplify the calculation.
+
+Now we have:
+\[%
+    V(x,y) 
+    =
+    (A e^{ky}+ B e^{-ky})
+    D \cos\left(kx\right) 
+\]%
+
+Using limit (i): 
+
+
+\[%
+    V(x,0) 
+    =
+    (A+B)D  \cos\left(kx\right) 
+    =
+    0
+\]%
+
+If we assume $D \neq 0$ :
+
+\[%
+     \therefore  \ 
+    A = -B
+\]%
+
+We now have: 
+\[%
+    (-Be^{ky} + B e^{-ky}) D \cos\left(kx\right) 
+\]%
+
+Let's simplify the $y$-function.
+ 
+\[%
+    -B(e^{ky}- e^{-ky})D \cos\left(kx\right) 
+\]%
+
+
+\[%
+    \frac{B'}{2}
+    =
+    -B
+\]%
+
+Meaning our $y$-function is:
+
+\[%
+    B'\sinh (ky)
+\]%
+
+And our voltage function is:
+
+
+\[%
+    B'\sinh (ky)
+    D \cos\left(kx\right) 
+\]%
+
+Let's combine our coefficients:
+
+\[%
+    A' 
+    =
+    B'D 
+    \qquad
+    \Rightarrow 
+    \qquad
+    V(x,y)
+    = 
+    A' \sinh(ky) \cos\left(kx\right) 
+\]%
+
+Using boundary (iii):
+\[%
+    V(b,y)
+    =
+    0
+    \qquad
+    \Rightarrow 
+    \qquad
+    A' \sinh(ky) \cos\left(kb\right) 
+    =
+    0 
+    \qquad
+    \Rightarrow 
+    \qquad
+    \cos\left(kb\right) 
+    =
+    0
+\]%
+
+So we actually have infinite solutions for $kb$.
+
+
+\[%
+    kb 
+    =
+    \sum_{n=1}^{\infty} \pm \frac{n {\pi}}{2}
+\]%
+
+But $b$ is a constant value of a certain measurement of our pipe.
+ 
+\[%
+     \therefore \ k = \sum_{n=1}^{\infty} \frac{(2n-1)\pi}{2b}
+\]%
+
+So now we have a many different natural frequencies that satisfy the conditions.
+
+Let's say that the $n$-th term of $k$ is $\alpha_n$.
+
+\[%
+    V(x,y) 
+    =
+    \sum_{n=1}^{\infty} A'_{n} \sinh\left(\alpha_n y\right) \cos\left(\alpha_n x\right) 
+\]%
+
+Using the $V_0$ boundary condition:
+
+
+\[%
+    V_0 
+    =
+    \sum_{n=1}^{\infty} A'_{n} \sinh\left(\alpha_n y\right) \cos\left(\alpha_n x\right) 
+\]%
+
+Multiplying $\cos (\alpha_n x)$ on both sides of the equation and integrating
+from $b$ to $-b$ gives:
+
+% When the frequencies are the same, it evaluates to dirac function? Picks it out
+% of the series.
+
+\[%
+    V_0 \cos\left(\alpha_{n'} x\right)
+    =
+    \sum_{n=1}^{\infty} A'_{n} \sinh\left(\alpha_n y\right) \cos\left(\alpha_{n'} x\right) \cos\left(\alpha_n x\right) 
+\]%
+
+\[%
+    V_0 
+    \int^{b}_{-b} 
+    \cos\left(\alpha_{n'} x\right)
+    dx 
+    =
+    \sum_{n=1}^{\infty} A'_{n} \sinh\left(\alpha_n y\right) 
+    \int^{b}_{-b} 
+    \cos\left(\alpha_{n'} x\right) \cos\left(\alpha_n x\right) 
+    dx 
+\]%
+
+
+\[%
+    \because \ \
+    \sum_{n=1}^{\infty} A'_{n} \sinh\left(\alpha_n y\right) 
+    \int^{b}_{-b} 
+    \cos\left(\frac{(2n-1)\pi}{2b}x\right) 
+    \cos\left(\frac{(2n-1)\pi}{2b}x\right)  \ dx 
+    =
+    A'_{n} \sinh\left(\alpha_n y\right) 
+    b\left(1-\frac{\sin(2n {\pi})}{(2n-1){\pi}}\right)
+    =
+    A'_{n} \sinh\left(\alpha_n y\right) 
+    b
+\]%
+
+
+\[%
+     \therefore 
+     A'_{n} = 
+     \frac{2V_0}{b}  
+     \frac{\sin(\alpha_n b)}{\alpha_n \sinh\left(\alpha_n\right) a}
+     \cos\left(\alpha_n x\right) 
+\]%
+
+
+\[%
+    V(x,y) 
+    =
+    \sum_{n=1}^{\infty} 
+    \frac{2V_0}{b}  
+    \frac{\sin(\alpha_n b)\sinh(\alpha_n y)}{\alpha_n \sinh\left(\alpha_n\right) a}
+    \cos\left(\alpha_n x\right) 
+\]%
+
+
+\clearpage
+\subsection{Griffiths, Chapter 3, Problem 40} 
+
+\[%
+    
+\]%
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\section{Problem Sheet 2} 
+
+
+%%%%%%%%%%%%%%%%%%%%
 \section{FAW Notes - Chapter 1} 
 
 %%%%%%%%%%%%%%%%%%%%
 \section{FAW Notes - Chapter 2} 
-
-%%%%%%%%%%%%%%%%%%%%
-\section{Problem Sheet 1} 
-
-%%%%%%%%%%%%%%%%%%%%
-\section{Problem Sheet 2} 
 
 %%%%%%%%%%%%%%%%%%%%
 \section{Other Topics} 
